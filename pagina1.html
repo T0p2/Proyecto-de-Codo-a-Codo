@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -15,27 +16,38 @@
     </header>
     <h1>Acceso al formulario de datos:</h1>
 
-    <form action="">
+
+    <form action="" class ="form">
+        <img src="/OIP.jpg" class = "img">
+        <br>
         <fieldset>
             <legend>Formulario de registro</legend>
-        <fieldset>
-            <label for="name">Nombre: <input type="text" id="name"></label>
+         <fieldset>
+            <legend>Datos personales</legend>
+            <label for="name" >Nombre: <input type="text" id="name" placeholder="Pedro" required></label>
             <br>
-            <label for="surname">Apellido: <input type="text" id="surname"></label>
+            <label for="surname">Apellido: <input type="text" id="surname" placeholder ="Perez" required></label>
             <br>
-            <label for="email">Email: <input type="email" id="email"></label>
-        </fieldset>
+            <label for="email">Email: <input type="email" id="email" placeholder ="pedroPerez123@gmail.com" required></label>
             <br>
-        <fieldset>
+            <label for="phone">Tel. contacto (opcional, sin simbolos): <input type="number" id="phone" placeholder="1122334455"></label>
+            <br>
             <input type="radio" name ="option" value ="1"> Extranejero
             <input type="radio" name ="option" value ="2"> Nacional
             <br>
-            <label for="DNI">DNI: <input type="number" id="DNI"></label>
+            <label for="DNI">DNI: <input type="number" id="DNI" required></label>
             <br>
-        </fieldset>
-        <fieldset>
+         </fieldset>
+         <fieldset>
             <legend>Datos del turno</legend>
             <label for="date">Fecha: <input type="date" id="date"></label>
+            <script>
+//este es el script para poder poner la fecha minima como mañana para seleccionar el turno.
+                const datePickerId = document.getElementById("date");
+                const tomorrow = new Date();
+                tomorrow.setDate(tomorrow.getDate()); // Calculamos la fecha de mañana.
+                datePickerId.min = tomorrow.toISOString().split("T")[0]; // Establecemos la fecha mínima como mañana.
+              </script> 
             <br>
             Horario del turno:
             <select name="turno">
@@ -48,7 +60,7 @@
                 <option>16:00 pm</option>
             </select>
         </fieldset>
-        </fieldset>
+           
         <input type="submit" value ="enviar">
     </form>
 </body>
