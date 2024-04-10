@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="/index.html">Pagina Principal</a></li>
+            <li><a href="/pagina2.html">pagina 2</a></li>
+            <li><a href="/pagina3.html">pagina 3</a></li>
+        </ul>
+    </header>
+    <h1>Acceso al formulario de datos:</h1>
+
+    <form action="">
+        <fieldset>
+            <legend>Formulario de registro</legend>
+        <fieldset>
+            <label for="name">Nombre: <input type="text" id="name"></label>
+            <br>
+            <label for="surname">Apellido: <input type="text" id="surname"></label>
+            <br>
+            <label for="email">Email: <input type="email" id="email"></label>
+        </fieldset>
+            <br>
+        <fieldset>
+            <input type="radio" name ="option" value ="1"> Extranejero
+            <input type="radio" name ="option" value ="2"> Nacional
+            <br>
+            <label for="DNI">DNI: <input type="number" id="DNI"></label>
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Datos del turno</legend>
+            <label for="date">Fecha: <input type="date" id="date"></label>
+            <br>
+            Horario del turno:
+            <select name="turno">
+                <option>10:00 am</option>
+                <option>11:00 am</option>
+                <option>12:00 pm</option>
+                <option>13:00 pm</option>
+                <option>14:00 pm</option>
+                <option>15:00 pm</option>
+                <option>16:00 pm</option>
+            </select>
+        </fieldset>
+        </fieldset>
+        <input type="submit" value ="enviar">
+    </form>
+</body>
+</html>
