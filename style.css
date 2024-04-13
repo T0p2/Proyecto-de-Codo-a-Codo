@@ -41,7 +41,8 @@
     margin-top: 5px;
 }
 
-
+/* RESPONSIVE */
+/*tamaño small para celulares*/
 @media only screen and (max-width: 600px) {
 
     .boton_sumbit {
@@ -55,6 +56,7 @@
     }
 }
 
+/*tamaño medium para tablets*/
 @media only screen and (min-width: 600px) {
     .boton_sumbit{
         width: 50%;
@@ -63,6 +65,7 @@
     }
 }
 
+/*tamaño large para escritorios*/
 @media only screen and (min-width: 768px) {
     .boton_sumbit{
         width: 100%;
