@@ -26,3 +26,28 @@
     display: block;
     margin-bottom: 2px;
 }
+
+@media only screen and (max-width: 600px) {
+
+    .boton_sumbit {
+        width: 30%;
+        margin-left: 35%;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .boton_sumbit{
+        width: 50%;
+        margin-left: 25%;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .boton_sumbit{
+        width: 100%;
+        margin-left: 0%;
+        padding: 5px;
+    }
+}
