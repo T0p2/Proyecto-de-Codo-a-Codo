@@ -14,7 +14,7 @@
             <li><a href="/pagina3.html">pagina 3</a></li>
         </ul>
     </header>
-    <h1>Acceso al formulario de datos:</h1>
+    <h1>Acceso al formulario para la reserva de la cabaña:</h1>
 
 
     <form action="" class ="form">
@@ -22,7 +22,7 @@
         <br>
         <fieldset>
             <legend>Formulario de registro</legend>
-         <fieldset>
+        <fieldset>
             <legend>Datos personales</legend>
             <label for="name" class="col-labels" >Nombre: </label><input type="text" id="name" class ="col-input" placeholder="Pedro" required>
             <br>
@@ -39,19 +39,34 @@
             <br>
          </fieldset>
          <fieldset>
-            <legend>Datos del turno</legend>
-            <label for="date" class ="col-labels">Fecha: </label><input type="date" id="date" class ="col-input">
+            <legend>Datos de cabaña</legend>
+            <label for="cabaña">Cabaña para cuantas personas? </label>
+            <br>
+            <input type="radio" name="cabaña" id="cabaña">1</input>
+            <input type="radio" name="cabaña" id="cabaña">2</input>
+            <input type="radio" name="cabaña" id="cabaña">3</input>
+            <input type="radio" name="cabaña" id="cabaña">4</input>
+            <input type="radio" name="cabaña" id="cabaña">otro</input>
+            <input type="text" name="cabaña" id="cabaña">
+            <br>
+            <label for="dateIn" class ="col-labels">Fecha de Entrada: </label><input type="date" id="dateIn" class ="col-input">
+            <label for="dateOut" class ="col-labels">Fecha de Salida: </label><input type="date" id="dateOut" class ="col-input">
+
             <script>
 //este es el script para poder poner la fecha minima como mañana para seleccionar el turno.
-                const datePickerId = document.getElementById("date");
+                const datePickerIdin = document.getElementById("dateIn");
+                const datePickerIdOut = document.getElementById("dateOut");
+                const today = new Date();
                 const tomorrow = new Date();
-                tomorrow.setDate(tomorrow.getDate()); // Calculamos la fecha de mañana.
-                datePickerId.min = tomorrow.toISOString().split("T")[0]; // Establecemos la fecha mínima como mañana.
+                tomorrow.setDate(tomorrow.getDate() + 1);// Calculamos la fecha de mañana.
+                today.setDate(today.getDate()); 
+                datePickerIdOut.min = tomorrow.toISOString().split("T")[0]; // Establecemos la fecha mínima como mañana.
+                datePickerIdin.min = today.toISOString().split("T")[0]; 
               </script> 
             <br>
         </fieldset>
            
-        <input class="boton_sumbit" type="submit" value ="enviar">
+        <input class="boton_sumbit" type="submit" value ="buscar">
     </form>
 </body>
 </html>
