@@ -43,11 +43,27 @@ function comprobarEdad() {
 
 
 //este es el script para poder poner la fecha minima como mañana para seleccionar el turno.
+
+
+
+
 const datePickerIdin = document.getElementById("dateIn");
 const datePickerIdOut = document.getElementById("dateOut");
+
+// Establecemos la fecha mínima inicial para datePickerIdin como hoy.
+//Establecemos la fecha de salida minima como mañana, independientemente de que despues pueda cambiar con el evento.
 const today = new Date();
 const tomorrow = new Date();
-tomorrow.setDate(tomorrow.getDate() + 1);// Calculamos la fecha de mañana.
-today.setDate(today.getDate());
+tomorrow.setDate(today.getDate() + 1);
+
+datePickerIdin.min = today.toISOString().split("T")[0];
 datePickerIdOut.min = tomorrow.toISOString().split("T")[0]; // Establecemos la fecha mínima como mañana.
-datePickerIdin.min = today.toISOString().split("T")[0]; 
+
+
+// Cuando el usuario elija una fecha en datePickerIdin, actualizamos la fecha mínima de datePickerIdOut.
+datePickerIdin.addEventListener('change', function() {
+    const selectedDate = new Date(datePickerIdin.value);
+    const minDateOut = new Date();
+    minDateOut.setDate(selectedDate.getDate() + 2); // +2 para que la minima sea mañana y no incluya el hoy
+    datePickerIdOut.min = minDateOut.toISOString().split("T")[0];
+});
