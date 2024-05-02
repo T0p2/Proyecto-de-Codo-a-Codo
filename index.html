@@ -1,20 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Pagina Principal</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo_favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Cabañas FaNiFraNa</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
-    <header>
-        <ul>
-            <li><a href="/pagina1.html">Formulario</a></li>
-            <li><a href="/pagina2.html">pagina 2</a></li>
-            <li><a href="/pagina3.html">pagina 3</a></li>
-        </ul>
+    <header class="header">
+        <div class="logo">
+            <h1>CABAÑAS FANIFRANA</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li> <a href="index.html">INICIO</a> </li>
+                <li> <a href="cabañas.html">CABAÑAS</a> </li>
+                <li> <a href="servicios.html">SERVICIOS</a> </li>
+                <li> <a href="galeria.html">GALERIA</a> </li>
+                <li> <a href="ubicacion-y-contacto.html">UBICACION Y CONTACTO</a> </li>
+            </ul>
+        </div>
     </header>
-    <h1>Pagina Principal</h1>
-    <br>
-    <h2>Para acceder al Formulario: <a href="/pagina1.html">Formulario</a></h2>
+    <main>
+        <div class="section">
+            <section id="inicio">
+                <h1>Bienvenidos a nuestras cabañas</h1>
+                <p>Disfruta de la naturaleza y la tranquilidad en nuestras acogedoras cabañas.</p>
+            </section>
+            <div class="article">
+                <article class="contenedor-imagenes" id="cabañas">
+                    <a href="cabanas.html">
+                        <img src="img/cabañas.jpeg" alt="cabañas">
+                    </a>
+                </article>
+                <article class="contenedor-imagenes" id="servicios">
+                    <a href="servicios.html">
+                        <img src="img/servicios.jpeg" alt="servicios">
+                    </a>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Cabañas en Alquiler</p>
+    </footer>
+
 </body>
+
 </html>
