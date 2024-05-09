@@ -1,20 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <title>Pagina Principal</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilosIndex.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.google.com/specimen/Red+Hat+Text" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <title>CABAÑAS FANIFRANA</title>
 </head>
+
 <body>
-    <header>
-        <ul>
-            <li><a href="pagina1.html">Formulario</a></li>
-            <li><a href="pagina2.html">pagina 2</a></li>
-            <li><a href="pagina3.html">pagina 3</a></li>
-        </ul>
+    <header class="header">
+        <nav class="navbar">
+            <h1 class="logo">CABAÑAS FANIFRANA</h1>
+
+            <label class="label_hamburguesa" for="menu_hamburguesa">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="list_icon"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </label>
+
+            <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
+
+            <ul class="ul_links">
+                <li class="li_links">
+                    <a href="index.html" class="link">INICIO</a>
+                </li>
+                <li class="li_links">
+                    <a href="reserva.html" class="link">RESERVAS</a>
+                </li>
+                <li class="li_links">
+                    <a href="servicios.html" class="link">SERVICIOS</a>
+                </li>
+                <li class="li_links">
+                    <a href="ubicacion.html" class="link">UBICACION</a>
+                </li>
+                <li class="li_links">
+                    <a href="contacto.html" class="link">CONTACTO</a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <h1>Pagina Principal</h1>
-    <br>
-    <h2>Para acceder al Formulario: <a href="/pagina1.html">Formulario</a></h2>
+    <main>
+        <div class="section">
+            <section id="inicio">
+                <h3>BIENVENIDOS A CABAÑAS FANIFRANA</h3>
+                <p class="texto-completo">Te invitamos a nuestro lugar en el mundo donde podrás descansar, desconectarte de la rutina y disfrutar de nuestra bellísima Patagonia. Somos apasionados de las experiencias de viajes y con la atención cálida y cuidadosa de nuestro staff vamos a hacer todo lo posible para que disfrutes de la espectacular naturaleza y que esta experiencia sea un recuerdo inolvidable. Te esperamos!</p>
+                <p class="texto-corto">Te invitamos a nuestro lugar en el mundo donde podrás descansar, desconectarte de la rutina y disfrutar de nuestra bellísima Patagonia.</p>
+            </section>
+            <div class="article">
+                <article class="image-container" id="cabañas">
+                    <a href="cabanas.html">
+                        <img src="/img/cabañas.png" alt="cabañas">
+                        <div class="image-text">
+                            <h2>LAS CABAÑAS</h2>
+                            <p>Te invitamos a conocer nuestras cabañas totalmente equipadas</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="image-container" id="servicios">
+                    <a href="servicios.html">
+                        <img src="img/servicios.png" alt="servicios">
+                        <div class="image-text">
+                            <h2>PASION POR EL SERVICIO</h2>
+                            <p>Te atenderemos encantados para ofrecerte lo mejor</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Cabañas en Alquiler</p>
+    </footer>
 </body>
+
 </html>
