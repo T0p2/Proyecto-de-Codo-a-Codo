@@ -32,7 +32,7 @@ function comprobarEdad() {
         dni.value = '';
         cabaña.value= '';
         dateIn.value = '';
-        dateOut= '';
+        dateOut.value= '';
 
         alert("Usted no puede continuar con el proceso de registro ya que es menor de edad. Lo sentimos!")
     }
