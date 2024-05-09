@@ -12,11 +12,15 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--color_blanco);
     font-family: 'Red Hat Text', sans-serif;
     font-weight: 100;
     line-height: 1.3em;
     letter-spacing: .4px;
+
+     background-image: url('/imagenes/image.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 a {
@@ -83,16 +87,22 @@ ul {
     color: var(--color_blanco);
     font-weight: bold;
 }
-
+.image-container{
+    background-image: url('/imagenes/image.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 .form {
     display: flex;
     /* Utilizamos flexbox para alinear los elementos */
+    justify-content: center;
     flex-direction: column;
     /* Los elementos se colocan en columnas */
     align-items: center;
     /* Los elementos se alinean al centro */
     border-radius: 20px;
-    background-color: #f2f2f2;
+    height: 90vh;
     padding: 20px;
 }
 
@@ -104,6 +114,10 @@ ul {
     border-radius: 5px;
     margin-bottom: 15px;
     /*esapcio entre los contenidos de abajo*/
+    background-color: #ffffff;
+    
+    font-family: "Roboto Condensed", sans-serif;
+    
 
 }
 
@@ -124,12 +138,16 @@ ul {
     margin-top: 5px;
     display: block;
     margin-bottom: 2px;
+   
 }
 
 .col-input {
     float: left;
     width: 60%;
     margin-top: 5px;
+    text-align: center;
+    
+    
 }
 
 footer {
