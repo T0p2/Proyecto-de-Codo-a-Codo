@@ -1,226 +1,210 @@
-ul {
-    font-family: "Roboto", sans-serif;
-    list-style-type: none;
+:root {
+    --color_primario: #333;
+    --color_blanco: #fff;
+    --altura_header: 80px;
+    --padding_left_right: 2rem;
+    --ancho_maximo: 1200px;
+}
+
+* {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #333;
+    box-sizing: border-box;
 }
 
-li {
-    float: left;
-    margin-right: 20px;
+body {
+    background-color: var(--color_blanco);
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 100;
+    line-height: 1.3em;
+    letter-spacing: .4px;
 }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+a {
     text-decoration: none;
 }
 
-li a:hover {
-    background-color: #111;
-}
-
-.roboto-thin {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-}
-
-.roboto-light {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-}
-
-.roboto-regular {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.roboto-medium {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-}
-
-.roboto-bold {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.roboto-black {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-}
-
-.roboto-thin-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-}
-
-.roboto-light-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-}
-
-.roboto-regular-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.roboto-medium-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-}
-
-.roboto-bold-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-}
-
-.roboto-black-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: italic;
+ol,
+ul {
+    list-style: none;
 }
 
 .header {
-    background-color: #333;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    color: #fff;
+    height: var(--altura_header);
+    background-color: var(--color_primario);
+}
+
+.navbar {
+    height: 100%;
     display: flex;
-    /* Para alinear elementos horizontalmente */
     justify-content: space-between;
-    /* Espacio entre "logo" y "nav" */
     align-items: center;
-    /* Centra verticalmente los elementos */
-    padding: 10px;
-    /* Espacio interno para el contenido */
+    flex-wrap: wrap;
+    padding: 0 var(--padding_left_right);
 }
 
-h1 {
-    font-family: "Roboto", sans-serif;
-    color: #fff;
-    align-items: center;
+.menu_hamburguesa {
+    display: none;
 }
 
-p {
-    font-family: "Roboto", sans-serif;
-    color: #fff;
-    align-items: center;
+.menu_hamburguesa:checked+.ul_links {
+    height: calc(100vh - var(--altura_header));
 }
 
 .logo {
-    font-size: 15px;
-    /* Tamaño de fuente para el logo */
-    flex: 1;
+    color: var(--color_blanco);
 }
 
-nav {
-    color: #fff;
-    /* Letras claras */
-    flex: 5;
+.list_icon {
+    color: var(--color_blanco);
+    cursor: pointer;
 }
 
-/* .section {
-    background: #000;
+.ul_links {
+    width: 100%;
+    background-color: var(--color_primario);
+    position: absolute;
+    top: var(--altura_header);
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1000;
+    /* height: calc(100vh - var(--altura_header)); */
     display: flex;
-    flex-flow: row wrap;
-    flex: 2 1 auto;
-}
-
-.article {
-    flex: 1 1 50%;
-} */
-
-/* .contenedor-imagenes {
-    display: flex;
-    margin-right: 10px;
-
-    width: 50%;
-
-    height: auto;
-
-} */
-.section {
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background: #000;
+    gap: 3rem;
+    transition: all .3s;
+}
+
+.link {
+    font-size: 1.5em;
+    color: var(--color_blanco);
+    font-weight: bold;
+}
+
+footer {
+    background: #333;
+    color: var(--color_blanco);
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.section {
+    background: var(--color_blanco);
+    color: #333;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 20px;
 }
 
 .article {
     display: flex;
-}
-
-.contenedor-imagenes {
-    flex: 1 1 50%;
+    flex-direction: column;
     margin-right: 10px;
-    /* Espacio entre las imágenes */
+    margin-left: 10px;
+    gap: 10px;
 }
 
-.contenedor-imagenes img {
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+.image-container img {
     width: 100%;
     height: auto;
 }
 
+main {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 100;
+    line-height: 1.3em;
+    letter-spacing: .4px;
+}
 
-/*De 601 a 800px*/
-@media all and (max-width: 800px) {
+#inicio h1 {
+    margin: 30px 1rem;
+}
 
-    /*El aside debe pasar hacia abajo*/
-    .section {
-        flex-direction: column;
+h2 {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+#inicio p {
+    margin: 20px 1rem 10px 1rem;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo negro con opacidad */
+    padding: 5px 10px;
+    /* Espaciado interno alrededor del texto */
+    display: inline-block;
+    /* Ajusta el fondo al contenido del texto */
+}
+
+.texto-completo {
+    display: none;
+}
+
+.texto-corto {
+    display: block;
+}
+
+@media (min-width:768px) {
+    .label_hamburguesa {
+        display: none;
     }
 
-    /*Los elementos del menu deben mostrarse uno debajo del otro*/
-    .header {
-        flex-direction: column;
+    .ul_links {
+        position: static;
+        width: auto;
         height: auto;
+        flex-direction: row;
+        gap: 2rem;
     }
 
-    /*Los elementos del aside se deben mostrar uno al lado del otro*/
-    .aside {
-        display: flex;
-        justify-content: center;
+    .link {
+        font-size: 1.2rem;
+        transition: all .3s;
+        padding: .2rem .7rem;
     }
 
-    .contenedor-imagenes {
-        width: 20%;
-    }
-}
-
-/*De 401 a 600px*/
-@media all and (max-width: 600px) {
-    .articulos {
-        flex-direction: column;
+    .link:hover {
+        background-color: #111;
     }
 
-    .contenedor-imagenes {
-        width: 30%;
-    }
-}
-
-/*De 0 a 400px*/
-@media all and (max-width: 400px) {
-    .aside {
-        flex-direction: column;
+    .article {
+        flex-direction: row;
     }
 
-    .contenedor-imagenes {
-        width: 45%;
+    .texto-completo {
+        display: block;
+    }
+
+    .texto-corto {
+        display: none;
     }
 }
