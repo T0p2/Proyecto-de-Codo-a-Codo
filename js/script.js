@@ -64,6 +64,6 @@ datePickerIdOut.min = tomorrow.toISOString().split("T")[0]; // Establecemos la f
 datePickerIdin.addEventListener('change', function() {
     const selectedDate = new Date(datePickerIdin.value);
     const minDateOut = new Date();
-    minDateOut.setDate(selectedDate.getDate() + 2); // +2 para que la minima sea mañana y no incluya el hoy
+    minDateOut.setDate(selectedDate.getDate() + 1); // +2 para que la minima sea mañana y no incluya el hoy
     datePickerIdOut.min = minDateOut.toISOString().split("T")[0];
 });
