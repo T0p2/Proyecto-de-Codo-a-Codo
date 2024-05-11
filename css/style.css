@@ -87,6 +87,13 @@ ul {
     color: var(--color_blanco);
     font-weight: bold;
 }
+
+.iframe-container{
+    display: flex;
+    height: 60px;
+    width:100%; 
+    border:none;
+}
 .image-container{
     background-image: url('/imagenes/image.png');
   background-repeat: no-repeat;
