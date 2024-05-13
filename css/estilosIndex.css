@@ -85,14 +85,20 @@ ul {
     font-weight: bold;
 }
 
-footer {
+#pie {
     background: #333;
     color: var(--color_blanco);
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
+
+}
+
+#pie a{
+    text-decoration: none;
+    padding: 10px;
 }
 
 .section {
