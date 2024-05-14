@@ -30,9 +30,9 @@ function comprobarEdad() {
         email.value = '';
         phone.value = '';
         dni.value = '';
-        cabaña.value= '';
+        cabaña.value = '';
         dateIn.value = '';
-        dateOut.value= '';
+        dateOut.value = '';
 
         alert("Usted no puede continuar con el proceso de registro ya que es menor de edad. Lo sentimos!")
     }
@@ -61,9 +61,37 @@ datePickerIdOut.min = tomorrow.toISOString().split("T")[0]; // Establecemos la f
 
 
 // Cuando el usuario elija una fecha en datePickerIdin, actualizamos la fecha mínima de datePickerIdOut.
-datePickerIdin.addEventListener('change', function() {
+datePickerIdin.addEventListener('change', function () {
     const selectedDate = new Date(datePickerIdin.value);
     const minDateOut = new Date();
     minDateOut.setDate(selectedDate.getDate() + 1); // +2 para que la minima sea mañana y no incluya el hoy
     datePickerIdOut.min = minDateOut.toISOString().split("T")[0];
 });
+
+
+
+
+
+//-------- codigo para busqueda de cabañas--------
+
+function busquedaCabañas() {
+    const radios = document.getElementsByName('cabaña');
+
+    // Itera a través de los botones para encontrar el seleccionado
+    let valorSeleccionado = null;
+    radios.forEach((radio) => {
+        
+        if (radio.checked) {
+            if(radio.value === "otro"){
+                valorSeleccionado = document.getElementById("otroInput").value;
+            }else{
+                valorSeleccionado = radio.value;
+            }
+            
+        }
+    });
+
+    // Ahora 'valorSeleccionado' contiene el valor del botón de radio seleccionado
+    console.log('Valor seleccionado:', valorSeleccionado);
+
+}
