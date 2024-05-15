@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function(){
         <div class="card">
             <div class="card-image"></div>
             <div class="card-text">
-                <span class="date">Hace 4 dias</span>
+                <span class="date">Publicado hace 4 dias</span>
                 <h2>Cabaña Ensueño</h2>
                 <p> Acogedora, rústica y encantadora. Rodeada de naturaleza, porche cubierto, chimenea cálida, cocina equipada, dormitorio confortable, baño relajante y aromas frescos.</p>
             </div>
