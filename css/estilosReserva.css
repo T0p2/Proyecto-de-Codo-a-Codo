@@ -1,5 +1,4 @@
 /* styles.css */
-/* styles.css */
 :root {
     --color_primario: #333;
     --color_blanco: #fff;
@@ -17,11 +16,7 @@ body {
     font-weight: 100;
     line-height: 1.3em;
     letter-spacing: .4px;
-
-     background-image: url('/imagenes/image.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+    background-color: #5f4c40;
 }
 
 a {
@@ -88,12 +83,14 @@ ul {
     color: var(--color_blanco);
     font-weight: bold;
 }
-.image-container{
-    background-image: url('/imagenes/image.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+
+.iframe-container{
+    display: flex;
+    height: 60px;
+    width:100%; 
+    border:none;
 }
+
 .form {
     display: flex;
     /* Utilizamos flexbox para alinear los elementos */
@@ -103,7 +100,6 @@ ul {
     align-items: center;
     /* Los elementos se alinean al centro */
     border-radius: 20px;
-    height: 90vh;
     padding: 20px;
 }
 
