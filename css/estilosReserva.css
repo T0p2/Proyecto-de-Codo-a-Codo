@@ -16,11 +16,7 @@ body {
     font-weight: 100;
     line-height: 1.3em;
     letter-spacing: .4px;
-
-     background-image: url('/imagenes/image.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+    background-color: #5f4c40;
 }
 
 a {
@@ -94,12 +90,7 @@ ul {
     width:100%; 
     border:none;
 }
-.image-container{
-    background-image: url('/img/image.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
+
 .form {
     display: flex;
     /* Utilizamos flexbox para alinear los elementos */
