@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilosReserva.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.google.com/specimen/Red+Hat+Text" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <h1 class="logo">CABAÑAS FANIFRANA</h1>
+
+            <label class="label_hamburguesa" for="menu_hamburguesa">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="list_icon"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </label>
+
+            <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
+
+            <ul class="ul_links">
+                <li class="li_links">
+                    <a href="index.html" class="link">INICIO</a>
+                </li>
+                <li class="li_links">
+                    <a href="formulario.html" class="link">RESERVAS</a>
+                </li>
+                <li class="li_links">
+                    <a href="servicios.html" class="link">SERVICIOS</a>
+                </li>
+                <li class="li_links">
+                    <a href="ubicacion.html" class="link">NOSOTROS</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <br>
+    <h1>Ubicacion de la empresa:</h1>
+    <br>
+
+    <form action="">
+        <fieldset>
+            <legend>Contacto</legend>
+            <label for="name" class="col-labels">Nombre: </label><input type="text" id="name" class="col-input"
+                placeholder="Pedro" required>
+            <br>
+            <label for="surname" class="col-labels">Apellido: </label><input type="text" id="surname"
+                placeholder="Perez" required class="col-input">
+            <br>
+            <label for="email" class="col-labels">Email: </label><input class="col-input" type="email" id="email"
+                placeholder="pedroPerez123@gmail.com" required>
+            <br>
+            <label for="phone" class="col-labels">Tel. contacto (opcional, sin simbolos): </label><input
+                class="col-input" type="number" id="phone" placeholder="1122334455">
+            <br>
+            <label for="texto" class="col-labels">Ingrese su consulta: </label><textarea name="texto"
+                id="texto-consulta" class="col-input"></textarea>
+        </fieldset>
+    </form>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4273.5178812297!2d-71.64345132097357!3d-40.76568723621414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9610bf42e48faa93%3A0x205ebc786470b636!2sVilla%20La%20Angostura%2C%20Neuqu%C3%A9n!5e0!3m2!1ses-419!2sar!4v1715885373585!5m2!1ses-419!2sar"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+
+</html>
