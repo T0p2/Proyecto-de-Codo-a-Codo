@@ -1,0 +1,163 @@
+
+/* styles.css */
+:root {
+    --color_primario: #333;
+    --color_blanco: #fff;
+    --altura_header: 80px;
+    --padding_left_right: 2rem;
+    --ancho_maximo: 1200px;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 100;
+    line-height: 1.3em;
+    letter-spacing: .4px;
+    /*background-color: #5f4c40;*/
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+.header {
+    height: var(--altura_header);
+    background-color: var(--color_primario);
+}
+
+.navbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 var(--padding_left_right);
+}
+
+.menu_hamburguesa {
+    display: none;
+}
+
+.menu_hamburguesa:checked+.ul_links {
+    height: calc(100vh - var(--altura_header));
+}
+
+h1, h2{
+    text-align: center;
+    font-family:'Red Hat Text', sans-serif;
+    letter-spacing: 5px;
+
+}
+
+.list_icon {
+    color: var(--color_blanco);
+    cursor: pointer;
+}
+
+.ul_links {
+    width: 100%;
+    background-color: var(--color_primario);
+    position: absolute;
+    top: var(--altura_header);
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1000;
+    /* height: calc(100vh - var(--altura_header)); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    transition: all .3s;
+}
+
+.link {
+    font-size: 1.5em;
+    color: var(--color_blanco);
+    font-weight: bold;
+}
+
+.iframe-container{
+    display: flex;
+    height: 60px;
+    width:100%; 
+    border:none;
+}
+
+.form_container{
+   
+    border-radius: 10px;
+    border: #333;
+}
+
+.form{
+    display: flex;
+    /* Utilizamos flexbox para alinear los elementos */
+    justify-content: center;
+    flex-direction: column;
+    /* Los elementos se colocan en columnas */
+    align-items: center;
+    /* Los elementos se alinean al centro */
+    border-radius: 20px;
+    padding: 20px;
+}
+
+
+.form fieldset{
+    flex: 1;
+    /* El formulario ocupará el 50% del ancho */
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    /*esapcio entre los contenidos de abajo*/
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    
+}
+
+
+.form input, textarea{
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea{
+    resize: none;
+}
+
+.form button{
+    width: 100%;
+    background-color: #40a344;
+    color: white;
+    font-size:medium;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form button:hover{
+    background-color: #45a049;
+}
+
+.iframe{
+    display: flex;
+    justify-content: center;
+}
