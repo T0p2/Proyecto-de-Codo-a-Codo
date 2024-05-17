@@ -161,3 +161,21 @@ textarea{
     display: flex;
     justify-content: center;
 }
+
+/*tamaño medium para tablets*/
+@media only screen and (min-width: 600px) {
+    .boton_sumbit {
+        width: 50%;
+        margin-left: 25%;
+        padding: 10px;
+    }
+}
+
+/*tamaño large para escritorios*/
+@media only screen and (min-width: 768px) {
+    .boton_sumbit {
+        width: 100%;
+        margin-left: 0%;
+        padding: 5px;
+    }
+}

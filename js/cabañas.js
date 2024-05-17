@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function(){
             </div>
             <div class="card-price">
                 <div class="state">
-                    <a href="#" class="btn-gradient red block">Alquilar</a>
+                    <a href="../reserva.html" class="btn-gradient red block">Alquilar</a>
                 </div>
             </div>
         </div>
@@ -35,4 +35,3 @@ document.addEventListener('DOMContentLoaded', function(){
         
     }
 });
-    
