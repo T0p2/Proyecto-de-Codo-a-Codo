@@ -1,7 +1,7 @@
 let cabecera = `
     <nav class="navbar">
         <a href="index.html">
-            <h1 class="logo">CABAÑAS FANIFRANA</h1>
+            <h1 class="logo">CABAÑAS FANINA</h1>
         </a>
         <label class="label_hamburguesa" for="menu_hamburguesa">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="list_icon" viewBox="0 0 16 16">

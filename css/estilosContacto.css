@@ -1,92 +1,4 @@
 
-/* styles.css */
-:root {
-    --color_primario: #333;
-    --color_blanco: #fff;
-    --altura_header: 80px;
-    --padding_left_right: 2rem;
-    --ancho_maximo: 1200px;
-}
-
-
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Red Hat Text', sans-serif;
-    font-weight: 100;
-    line-height: 1.3em;
-    letter-spacing: .4px;
-    /*background-color: #5f4c40;*/
-}
-
-a {
-    text-decoration: none;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-.header {
-    height: var(--altura_header);
-    background-color: var(--color_primario);
-}
-
-.navbar {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0 var(--padding_left_right);
-}
-
-.menu_hamburguesa {
-    display: none;
-}
-
-.menu_hamburguesa:checked+.ul_links {
-    height: calc(100vh - var(--altura_header));
-}
-
-h1, h2{
-    text-align: center;
-    font-family:'Red Hat Text', sans-serif;
-    letter-spacing: 5px;
-
-}
-
-.list_icon {
-    color: var(--color_blanco);
-    cursor: pointer;
-}
-
-.ul_links {
-    width: 100%;
-    background-color: var(--color_primario);
-    position: absolute;
-    top: var(--altura_header);
-    left: 0;
-    height: 0;
-    overflow: hidden;
-    position: relative;
-    z-index: 1000;
-    /* height: calc(100vh - var(--altura_header)); */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    transition: all .3s;
-}
-
-.link {
-    font-size: 1.5em;
-    color: var(--color_blanco);
-    font-weight: bold;
-}
-
 .iframe-container{
     display: flex;
     height: 60px;
@@ -95,8 +7,7 @@ h1, h2{
 }
 
 .form_container{
-   
-    border-radius: 10px;
+    /* border-radius: 10px; */
     border: #333;
 }
 
@@ -109,7 +20,7 @@ h1, h2{
     align-items: center;
     /* Los elementos se alinean al centro */
     border-radius: 20px;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 
@@ -125,7 +36,6 @@ h1, h2{
     color: rgb(0, 0, 0);
     
 }
-
 
 .form input, textarea{
     width: 100%;
@@ -143,7 +53,7 @@ textarea{
 
 .form button{
     width: 100%;
-    background-color: #40a344;
+    background-color:#6b5d4e;
     color: white;
     font-size:medium;
     padding: 14px 20px;
@@ -154,7 +64,7 @@ textarea{
 }
 
 .form button:hover{
-    background-color: #45a049;
+    background-color:#4f4439;
 }
 
 .iframe{

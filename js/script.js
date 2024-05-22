@@ -1,16 +1,20 @@
 //Funcion para comprobar la edad del usuario a la hora de cargar
 //sus datos en el formulario
 function comprobarEdad() {
-    let edadBlank = document.getElementById("age"); //DOM del input
-    let edad = document.getElementById("age").value; //Valor del Input
+    console.log("hola");
+
+    let edadBlank = document.getElementById("age"); // DOM del input
+    let edad = parseInt(document.getElementById("age").value); // Valor del Input
     let resultado = document.getElementById("resultado");
-    console.log(edad);
+
+    console.log(edadBlank.value);
     if (edadBlank.value.trim() === "") {
         alert("Ingrese una edad porfavor!")
         //resultado.textContent = "Ingrese edad";
         return;
     }
     if (edadBlank.value < 18) {
+        alert("Usted no puede continuar con el proceso de registro ya que es menor de edad. Lo sentimos!")
         // Obtén los elementos del formulario por su ID
         var name = document.getElementById('name');
         var surname = document.getElementById('surname');
@@ -18,7 +22,7 @@ function comprobarEdad() {
         var email = document.getElementById('email');
         var phone = document.getElementById('phone');
         var dni = document.getElementById('DNI');
-        var cabaña = document.getElementById('cabaña');
+        var radioButtons = document.getElementsByName("personas");
         var dateIn = document.getElementById('dateIn');
         var dateOut = document.getElementById('dateOut');
 
@@ -30,11 +34,15 @@ function comprobarEdad() {
         email.value = '';
         phone.value = '';
         dni.value = '';
-        cabaña.value= '';
-        dateIn.value = '';
-        dateOut.value= '';
 
-        alert("Usted no puede continuar con el proceso de registro ya que es menor de edad. Lo sentimos!")
+        dateIn.value = '';
+        dateOut.value = '';
+
+//poner en blanco los type = radio
+        for (let i = 0; i < radioButtons.length; i++) {
+            radioButtons[i].checked = false;
+        }
+
     }
 }
 
@@ -61,7 +69,7 @@ datePickerIdOut.min = tomorrow.toISOString().split("T")[0]; // Establecemos la f
 
 
 // Cuando el usuario elija una fecha en datePickerIdin, actualizamos la fecha mínima de datePickerIdOut.
-datePickerIdin.addEventListener('change', function() {
+datePickerIdin.addEventListener('change', function () {
     const selectedDate = new Date(datePickerIdin.value);
     const minDateOut = new Date();
     minDateOut.setDate(selectedDate.getDate() + 2); // +2 para que la minima sea mañana y no incluya el hoy

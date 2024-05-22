@@ -6,11 +6,11 @@
     --ancho_maximo: 1200px;
 }
 
-/* * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} */
+}
 
 body {
     background-color: var(--color_blanco);
@@ -32,8 +32,6 @@ ul {
 .header {
     height: var(--altura_header);
     background-color: var(--color_primario);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
 
 .navbar {
@@ -72,6 +70,7 @@ ul {
     overflow: hidden;
     position: relative;
     z-index: 1000;
+    /* height: calc(100vh - var(--altura_header)); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,22 +85,14 @@ ul {
     font-weight: bold;
 }
 
-#pie {
+footer {
     background: #333;
     color: var(--color_blanco);
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-
-}
-
-#pie a{
-    text-decoration: none;
-    padding: 10px;
 }
 
 .section {
@@ -129,18 +120,11 @@ section {
 .image-container {
     position: relative;
     text-align: center;
-    overflow: hidden;
 }
 
 .image-container img {
     width: 100%;
     height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.image-container:hover img {
-    transform: scale(1.1);
 }
 
 main {
@@ -158,11 +142,9 @@ main {
 
 h2 {
     font-family: "Poiret One", sans-serif;
-    font-weight: 400;
-    font-size: xx-large;
-    margin-bottom: 40px;
-    margin-top: 20px;
-    line-height: 1.5;
+    font-weight: 100;
+    font-style: normal;
+    margin-bottom: 10px;
 }
 
 #inicio p {
@@ -189,44 +171,6 @@ h2 {
 
 .texto-corto {
     display: block;
-}
-
-#ubicacion h3 {
-    margin: 30px 1rem;
-}
-
-#ubicacion iframe {
-    width: 100%;
-    height: 450px;
-}
-
-
-/* Estilos para la lista de servicios */
-.servicios {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-  }  
-  
-  .servicios li {
-    flex-basis: calc(33% - 20px); 
-    margin-bottom: 20px;
-  }
-  
-  
-  @media screen and (max-width: 768px) {
-    .servicios {
-      flex-direction: column; 
-    }
-    .servicios li {
-      flex-basis: calc(50% - 20px); 
-    }
-  }
-
-@media (max-width: 768px) {
-    h2{
-        font-size: large;
-    }
 }
 
 @media (min-width:768px) {
