@@ -9,7 +9,8 @@
     border: #333;
 }
 
-.form{
+
+.form {
     display: flex;
     /* Utilizamos flexbox para alinear los elementos */
     justify-content: center;
@@ -18,11 +19,10 @@
     align-items: center;
     /* Los elementos se alinean al centro */
     border-radius: 20px;
-    /* padding: 20px; */
+    padding: 20px;
 }
 
-
-.form fieldset{
+.form fieldset {
     flex: 1;
     /* El formulario ocupará el 50% del ancho */
     padding: 30px;
@@ -31,23 +31,57 @@
     margin-bottom: 15px;
     /*esapcio entre los contenidos de abajo*/
     background-color: #ffffff;
-    color: rgb(0, 0, 0);
     
+ 
+    
+
 }
 
-.form input, textarea{
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+
+
+.col-labels {
+    float: left;
+    width: 40%;
+    margin-top: 5px;
+    display: block;
+    margin-bottom: 2px;
+   
 }
 
-/* textarea{
-    resize: none;
-} */
+.col-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  
+}
+
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.radio-group label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.radio-group label input[type="radio"] {
+    margin-right: 5px;
+}
+
+.form .radio-group input[type="text"] {
+    margin-left: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
 .form button{
     width: 100%;
@@ -85,5 +119,21 @@
         width: 100%;
         margin-left: 0%;
         padding: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .radio-group label {
+        margin-right: 0;
+    }
+
+    .radio-group label input[type="text"] {
+        margin-left: 0;
+        margin-top: 5px;
     }
 }
