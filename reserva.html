@@ -4,97 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilosIndex.css">
+    <link rel="stylesheet" href="css/estilosReserva.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.google.com/specimen/Red+Hat+Text" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <title>Reservas</title>
-    <link rel="stylesheet" href="/css/estilosReserva.css">
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <h1 class="logo">CABAÑAS FANINA</h1>
-
-            <label class="label_hamburguesa" for="menu_hamburguesa">
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="list_icon"
-                    viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                </svg>
-            </label>
-
-            <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
-
-            <ul class="ul_links">
-                <li class="li_links">
-                    <a href="index.html" class="link">INICIO</a>
-                </li>
-                <li class="li_links">
-                    <a href="formulario.html" class="link">RESERVAS</a>
-                </li>
-                <li class="li_links">
-                    <a href="servicios.html" class="link">SERVICIOS</a>
-                </li>
-                <li class="li_links">
-                    <a href="ubicacion.html" class="link">NOSOTROS</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-
-    <article class="image-container">
-        <form action="" class="form">
-            <br>
+    <header class="header" id="cabecera"></header>
+    <div class="section">
+        <section id="SERVICIOS">
+            <h2>RESERVAR</h2>
+        </section>
+    </div>
+    <form class="form">
+        <br>
+        <fieldset>
             <fieldset>
-                <fieldset>
-                    <legend>Datos personales</legend>
-                    <label for="name" class="col-labels">Nombre: </label><input type="text" id="name" class="col-input"
-                        placeholder="Pedro" required>
-                    <br>
-                    <label for="surname" class="col-labels">Apellido: </label><input type="text" id="surname"
-                        placeholder="Perez" required class="col-input">
-                    <br>
+                <legend>Datos personales</legend>
+                <label for="name" class="col-labels">Nombre: </label><input type="text" id="name" class="col-input"
+                    placeholder="Pedro" required>
+                <br>
+                <label for="surname" class="col-labels">Apellido: </label><input type="text" id="surname"
+                    placeholder="Perez" required class="col-input">
+                <br>
 
-                    <label for="age" class="col-labels">Edad: </label><input type="number" name="age" id="age"
-                        class="col-input">
-                    <br>
-                    <nav id="resultado"></nav>
+                <label for="age" class="col-labels">Edad: </label><input type="number" name="age" id="age"
+                    class="col-input">
+                <br>
+                <label for="email" class="col-labels">Email: </label><input class="col-input" type="email" id="email"
+                    placeholder="pedroPerez123@gmail.com" required>
+                <br>
+                <label for="phone" class="col-labels">Tel. contacto (opcional, sin simbolos): </label><input
+                    class="col-input" type="number" id="phone" placeholder="1122334455">
+                <br>
 
-                    <br>
-                    <label for="email" class="col-labels">Email: </label><input class="col-input" type="email"
-                        id="email" placeholder="pedroPerez123@gmail.com" required>
-                    <br>
-                    <label for="phone" class="col-labels">Tel. contacto (opcional, sin simbolos): </label><input
-                        class="col-input" type="number" id="phone" placeholder="1122334455">
-                    <br>
-                    <label for="DNI" class="col-labels">DNI: </label><input type="number" id="DNI" class="col-input"
-                        required>
-                    <br>
-                </fieldset>
-                <fieldset>
-                    <legend>Datos de cabaña</legend>
-                    <label for="cabaña">Cabaña para cuantas personas? </label>
-                    <br>
-                    <input type="radio" name="cabaña" id="cabaña">1</input>
-                    <input type="radio" name="cabaña" id="cabaña">2</input>
-                    <input type="radio" name="cabaña" id="cabaña">3</input>
-                    <input type="radio" name="cabaña" id="cabaña">4</input>
-                    <input type="radio" name="cabaña" id="cabaña">otro</input>
-                    <input type="text" name="cabaña" id="cabaña">
-                    <br>
-                    <label for="dateIn" class="col-labels">Fecha de Entrada: </label><input type="date" id="dateIn"
-                        class="col-input">
-                    <label for="dateOut" class="col-labels">Fecha de Salida: </label><input type="date" id="dateOut"
-                        class="col-input">
-                    <br>
-                </fieldset>
-                <button onclick="comprobarEdad()" class="boton_sumbit" type="button" value="buscar">Buscar</button>
+                <label for="DNI" class="col-labels">DNI: </label><input type="number" id="DNI" class="col-input"
+                    required max="8" min="8">
+                <br>
             </fieldset>
-        </form>
-        <script src="/js/script.js"></script>
+            <fieldset>
+                <legend>Datos de cabaña</legend>
+                <label for="cabaña">Cabaña para cuantas personas? </label>
+                <br>
+                <input type="radio" name="cabaña" id="cabaña" value="1">1</input>
+                <input type="radio" name="cabaña" id="cabaña" value="2">2</input>
+                <input type="radio" name="cabaña" id="cabaña" value="3">3</input>
+                <input type="radio" name="cabaña" id="cabaña" value="4">4</input>
+                <input type="radio" name="cabaña" id="cabaña" value="otro">otro</input>
+                <input type="text" name="cabaña" id="cabaña" id="otroInput" value="5"></input>
+                <br>
+                <label for="dateIn" class="col-labels">Fecha de Entrada: </label><input type="date" id="dateIn"
+                    class="col-input" required>
+                <label for="dateOut" class="col-labels">Fecha de Salida: </label><input type="date" id="dateOut"
+                    class="col-input" required>
+                <br>
+            </fieldset>
+            <button onclick=" busquedaCabañas(), comprobarEdad()" class="boton_sumbit" type="submit"
+                value="buscar">Reservar
+            </button>
+        </fieldset>
+    </form>
+
+    <script src="/js/script.js"></script>
+    <footer id="pie"></footer>
+    <script src="/js/head_foot.js"></script>
 </body>
-</article>
-<footer>
-    <p>© 2024 Cabañas en Alquiler</p>
-</footer>
 
 </html>

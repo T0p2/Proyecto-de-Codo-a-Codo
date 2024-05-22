@@ -1,3 +1,4 @@
+
 .iframe-container{
     display: flex;
     height: 60px;
@@ -6,6 +7,7 @@
 }
 
 .form_container{
+    /* border-radius: 10px; */
     border: #333;
 }
 
@@ -36,7 +38,7 @@
 }
 
 .form input, textarea{
-  width: 100%;
+    width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -45,9 +47,9 @@
   box-sizing: border-box;
 }
 
-/* textarea{
+textarea{
     resize: none;
-} */
+}
 
 .form button{
     width: 100%;
@@ -65,10 +67,10 @@
     background-color:#4f4439;
 }
 
-/* .iframe{
+.iframe{
     display: flex;
     justify-content: center;
-} */
+}
 
 /*tamaño medium para tablets*/
 @media only screen and (min-width: 600px) {
