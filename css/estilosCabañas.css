@@ -12,7 +12,6 @@
 
 #contenedor {
     width: 90%;
-    padding: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around;

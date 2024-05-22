@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,79 +14,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-    <title>Reservas</title>
-    
+    <link rel="shortcut icon" href="img/logo_favicon.ico" type="image/x-icon">
+    <title>CABAÑAS FANINA - Reservas</title>
 </head>
-
 <body>
     <header class="header" id="cabecera"></header>
-
-    
-        <form  class="form">
-            <br>
+    <main>
+        <div class="section">
+            <div class="SERVICIOS">
+                <h2>RESERVAS</h2>
+            </div>
+            <div id="contenedor"></div>
+        </div>
+    </main>
+    <form class="form">
+        <br>
+        <fieldset>
             <fieldset>
-                <fieldset>
-                    <legend>Datos personales</legend>
-                    <label for="name" class="col-labels">Nombre: </label><input type="text" id="name" class="col-input"
-                        placeholder="Pedro" required>
-                    <br>
-                    <label for="surname" class="col-labels">Apellido: </label><input type="text" id="surname"
-                        placeholder="Perez" required class="col-input">
-                    <br>
-
-                    <label for="age" class="col-labels">Edad: </label><input type="number" name="age" id="age"
-                        class="col-input">
-                    <br>
-                    <label for="email" class="col-labels">Email: </label><input class="col-input" type="email"
-                        id="email" placeholder="pedroPerez123@gmail.com" required>
-                    <br>
-                    <label for="phone" class="col-labels">Tel. contacto (opcional, sin simbolos): </label><input
-                        class="col-input" type="number" id="phone" placeholder="1122334455">
-                    <br>
-
-                    <label for="DNI" class="col-labels">DNI: </label><input type="number" id="DNI" class="col-input"
-                        required >
-                    <br>
-                </fieldset>
-                <fieldset>
-                    <legend>Datos de cabaña</legend>
-                    <label for="cabana0">Cabaña para cuantas personas? </label>
-                    <br>
-                    <div class ="radio-group">
-                        <label>
-                            <input type="radio" name="personas" value="1"> 1
-                        </label>
-                        <label>
-                            <input type="radio" name="personas" value="2"> 2
-                        </label>
-                        <label>
-                            <input type="radio" name="personas" value="3"> 3
-                        </label>
-                        <label>
-                            <input type="radio" name="personas" value="4"> 4
-                        </label>
-                        <label>
-                            <input type="radio" name="personas" value="otro"> otro
-                            <input type="text" name="otro_numero" placeholder="Especificar">
-                        </label>
-                    </div>
-                    <label for="dateIn" class="col-labels">Fecha de Entrada: </label><input type="date" id="dateIn"
-                        class="col-input" required>
-                    <label for="dateOut" class="col-labels">Fecha de Salida: </label><input type="date" id="dateOut"
-                        class="col-input" required>
-                    <br>
-                </fieldset>
-                <button onclick="comprobarEdad()" class="boton_sumbit" type="submit"
-                    value="buscar">Reservar</button>
+                <legend>Datos personales</legend>
+                <label for="name" class="col-labels">Nombre: </label><input type="text" id="name" class="col-input" placeholder="Pedro" required>
+                <br>
+                <label for="surname" class="col-labels">Apellido: </label><input type="text" id="surname" placeholder="Perez" required class="col-input">
+                <br>
+                <label for="age" class="col-labels">Edad: </label><input type="number" name="age" id="age" class="col-input">
+                <br>
+                <label for="email" class="col-labels">Email: </label><input class="col-input" type="email" id="email" placeholder="pedroPerez123@gmail.com" required>
+                <br>
+                <label for="phone" class="col-labels">Tel. contacto (opcional, sin simbolos): </label><input class="col-input" type="number" id="phone" placeholder="1122334455">
+                <br>
+                <label for="DNI" class="col-labels">DNI: </label><input type="number" id="DNI" class="col-input" required>
+                <br>
             </fieldset>
-        </form>
-
-
-        <script src="/js/script.js"></script>
-        <footer id="pie"></footer>
-        <script src="/js/head_foot.js"></script>
+            <fieldset>
+                <legend>Datos de cabaña</legend>
+                <label>Cabaña para cuántas personas?</label>
+                <br>
+                <div class="radio-group">
+                    <label for="personas_1">
+                        <input type="radio" id="personas_1" name="personas" value="1"> 1
+                    </label>
+                    <label for="personas_2">
+                        <input type="radio" id="personas_2" name="personas" value="2"> 2
+                    </label>
+                    <label for="personas_3">
+                        <input type="radio" id="personas_3" name="personas" value="3"> 3
+                    </label>
+                    <label for="personas_4">
+                        <input type="radio" id="personas_4" name="personas" value="4"> 4
+                    </label>
+                    <label for="otro_numero">
+                        <span>Otro</span>
+                        <input type="text" id="otro_numero" name="otro_numero" placeholder="Especificar">
+                    </label>
+                </div>
+                <label for="dateIn" class="col-labels">Fecha de Entrada: </label><input type="date" id="dateIn" class="col-input" required>
+                <label for="dateOut" class="col-labels">Fecha de Salida: </label><input type="date" id="dateOut" class="col-input" required>
+                <br>
+            </fieldset>
+            <button onclick="comprobarEdad()" class="boton_sumbit" type="submit" value="buscar">Reservar</button>
+        </fieldset>
+    </form>
+    <script src="/js/script.js"></script>
+    <footer id="pie"></footer>
+    <script src="/js/head_foot.js"></script>
 </body>
-
-
-
 </html>

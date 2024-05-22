@@ -32,6 +32,8 @@ ul {
 .header {
     height: var(--altura_header);
     background-color: var(--color_primario);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .navbar {
@@ -92,6 +94,8 @@ ul {
     justify-content: center;
     align-items: center;
     padding: 20px 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 
 }
 
@@ -155,10 +159,10 @@ main {
 h2 {
     font-family: "Poiret One", sans-serif;
     font-weight: 400;
-    font-size: x-large;
-    font-style: bold;
+    font-size: xx-large;
     margin-bottom: 40px;
     margin-top: 20px;
+    line-height: 1.5;
 }
 
 #inicio p {
@@ -219,8 +223,10 @@ h2 {
     }
   }
 
-@media (min-width: 768px) {
-    /* Estilos existentes para pantallas más grandes */
+@media (max-width: 768px) {
+    h2{
+        font-size: large;
+    }
 }
 
 @media (min-width:768px) {
