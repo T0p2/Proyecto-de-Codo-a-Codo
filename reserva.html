@@ -51,25 +51,25 @@
                 </fieldset>
                 <fieldset>
                     <legend>Datos de cabaña</legend>
-                    <label for="cabana0">Cabaña para cuantas personas? </label>
+                    <label for="personas">Cabaña para cuantas personas? </label>
                     <br>
                     <div class ="radio-group">
                         <label>
-                            <input type="radio" name="personas" value="1"> 1
+                            <input type="radio" name="personas" id= "personas" value="1"> 1
                         </label>
                         <label>
-                            <input type="radio" name="personas" value="2"> 2
+                            <input type="radio" name="personas" id= "personas0" value="2"> 2
                         </label>
                         <label>
-                            <input type="radio" name="personas" value="3"> 3
+                            <input type="radio" name="personas" id= "personas1" value="3"> 3
                         </label>
                         <label>
-                            <input type="radio" name="personas" value="4"> 4
+                            <input type="radio" name="personas" id= "personas2" value="4"> 4
                         </label>
-                        <label>
-                            <input type="radio" name="personas" value="otro"> otro
-                            <input type="text" name="otro_numero" placeholder="Especificar">
-                        </label>
+                        <div>
+                            <input type="radio" name="personas" id= "personas3" value="otro"> otro
+                            <input type="text" name="otro_numero" id= "personas4" placeholder="Especificar">
+                        </div>
                     </div>
                     <label for="dateIn" class="col-labels">Fecha de Entrada: </label><input type="date" id="dateIn"
                         class="col-input" required>
