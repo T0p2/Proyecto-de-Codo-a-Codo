@@ -1,0 +1,91 @@
+
+.iframe-container{
+    display: flex;
+    height: 60px;
+    width:100%; 
+    border:none;
+}
+
+.form_container{
+    /* border-radius: 10px; */
+    border: #333;
+}
+
+.form{
+    display: flex;
+    /* Utilizamos flexbox para alinear los elementos */
+    justify-content: center;
+    flex-direction: column;
+    /* Los elementos se colocan en columnas */
+    align-items: center;
+    /* Los elementos se alinean al centro */
+    border-radius: 20px;
+    /* padding: 20px; */
+}
+
+
+.form fieldset{
+    flex: 1;
+    /* El formulario ocupará el 50% del ancho */
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    /*esapcio entre los contenidos de abajo*/
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    
+}
+
+.form input, textarea{
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea{
+    resize: none;
+}
+
+.form button{
+    width: 100%;
+    background-color:#6b5d4e;
+    color: white;
+    font-size:medium;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form button:hover{
+    background-color:#4f4439;
+}
+
+.iframe{
+    display: flex;
+    justify-content: center;
+}
+
+/*tamaño medium para tablets*/
+@media only screen and (min-width: 600px) {
+    .boton_sumbit {
+        width: 50%;
+        margin-left: 25%;
+        padding: 10px;
+    }
+}
+
+/*tamaño large para escritorios*/
+@media only screen and (min-width: 768px) {
+    .boton_sumbit {
+        width: 100%;
+        margin-left: 0%;
+        padding: 5px;
+    }
+}
