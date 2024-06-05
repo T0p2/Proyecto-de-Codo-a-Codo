@@ -1,4 +1,4 @@
-Este proyecto contiene los trabajos prácticos del curso "Codo a Codo". Incluye varios ejercicios y ejemplos prácticos desarrollados en HTML, CSS y JavaScript.
+Este proyecto contiene el trabajo prácticos del curso "Codo a Codo". Se basa en una pagina web diseñada e implementada con HTML, CSS y JavaScrpit
 
 Contenidos
 Archivos HTML para diferentes ejercicios
