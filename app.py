@@ -18,7 +18,8 @@ class Formulario:
                 host=host,
                 user=user,
                 password=password,
-                database=database
+                database=database,
+                port= 3308
             )
             if self.connection.is_connected():
                 print("Conexión exitosa")
@@ -71,7 +72,7 @@ class Formulario:
         return(self.cursor.lastrowid)
 
 
-form = Formulario('127.0.0.1', 'root', '', 'formulario')
+form = Formulario('localhost', 'root', '', 'database_formulario')
 
 
 
