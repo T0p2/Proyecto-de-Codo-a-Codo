@@ -76,34 +76,35 @@ form = Formulario('localhost', 'root', '', 'database_formulario')
 
 
 
-@app.route("/reservar", methods=["POST"])
+@app.route("/reserva", methods=["GET", "POST"])
 def reservar():
-    
-    nombre = request.form['name']
-    apellido = request.form['surname']
-    edad = request.form['age']
-    email = request.form['email']
-    telefono = request.form['phone']
-    dni = request.form['dni']
-    cant_personas = request.form['cabaña']
-  # Si se seleccionó "otro", obtenemos el valor del campo de texto
-    if cant_personas == 'otro':
-        cant_personas = request.form.get('cabaña_otro')
-    fecha_entrada = request.form['dateIn']
-    fecha_salida = request.form['dateOut']
-    
-    registrado = form.registrar(nombre, apellido, edad, email, telefono, dni, cant_personas, fecha_entrada, fecha_salida)
-    
-    if registrado:
-        return jsonify({"mensaje": "Producto agregado correctamente."}), 201
+    if request.method == "POST":
+        # Manejar la solicitud POST (procesar los datos del formulario)
+        nombre = request.form['name']
+        apellido = request.form['surname']
+        edad = request.form['age']
+        email = request.form['email']
+        telefono = request.form['phone']
+        dni = request.form['dni']
+        cant_personas = request.form['cabaña']
+    # Si se seleccionó "otro", obtenemos el valor del campo de texto
+        if cant_personas == 'otro':
+            cant_personas = request.form.get('cabaña_otro')
+        fecha_entrada = request.form['dateIn']
+        fecha_salida = request.form['dateOut']
+        
+        registrado = form.registrar(nombre, apellido, edad, email, telefono, dni, cant_personas, fecha_entrada, fecha_salida)
+        
+        if registrado:
+            return jsonify({"mensaje": "Producto agregado correctamente."}), 201
+        else:
+            return jsonify({"mensaje": "Error al agregar el producto."}), 500
     else:
-        return jsonify({"mensaje": "Error al agregar el producto."}), 500
+         # Manejar la solicitud GET (mostrar el formulario HTML)
+        return render_template('formulario.html')#tiene que coicidir con el nombre del HTML
+    
 
 
-@app.route("/reserva", methods=["GET"])
-def formulario_reservar():
-    return render_template('formulario.html')
-  
 
 if __name__ == "__main__":
     app.run(debug=True)
