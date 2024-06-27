@@ -4,7 +4,15 @@ import mysql.connector
 from werkzeug.utils import secure_filename
 import os
 import time
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from mysql.connector import Error
+from dotenv import load_dotenv
+
+
+load_dotenv()  # Cargar variables de entorno desde el archivo .env
+
 
 app = Flask(__name__)
 CORS(app)
@@ -19,7 +27,7 @@ class Formulario:
                 user=user,
                 password=password,
                 database=database,
-                port= 3308
+                port = 3308
             )
             if self.connection.is_connected():
                 print("Conexión exitosa")
@@ -72,6 +80,7 @@ class Formulario:
         return(self.cursor.lastrowid)
 
 
+# Inicializar la clase Formulario con las variables de entorno
 form = Formulario('localhost', 'root', '', 'database_formulario')
 
 
@@ -96,6 +105,7 @@ def reservar():
         registrado = form.registrar(nombre, apellido, edad, email, telefono, dni, cant_personas, fecha_entrada, fecha_salida)
         
         if registrado:
+            enviar_correo_confirmacion(email, nombre)
             return jsonify({"mensaje": "Producto agregado correctamente."}), 201
         else:
             return jsonify({"mensaje": "Error al agregar el producto."}), 500
@@ -104,6 +114,29 @@ def reservar():
         return render_template('formulario.html')#tiene que coicidir con el nombre del HTML
     
 
+
+def enviar_correo_confirmacion(email, nombre):
+    remitente = 'nachoayerbe2003@gmail.com'
+    destinatario = email
+    asunto = 'Confirmación de Registro'
+    cuerpo = f'Hola {nombre},\n\nTu registro ha sido exitoso. Gracias por registrarte.\n\nSaludos,\nEquipo de Soporte'
+
+    mensaje = MIMEMultipart()
+    mensaje['From'] = remitente
+    mensaje['To'] = destinatario
+    mensaje['Subject'] = asunto
+    mensaje.attach(MIMEText(cuerpo, 'plain', 'utf-8'))  # Especificar codificación utf-8
+
+    try:
+        servidor = smtplib.SMTP('smtp.gmail.com', 587)
+        servidor.starttls()
+        servidor.login(remitente, 'gkhm xsei frvu akje')  # Cambia 'tu_contraseña' por tu contraseña real
+        texto = mensaje.as_string()
+        servidor.sendmail(remitente, destinatario, texto)
+        servidor.quit()
+        print("Correo enviado exitosamente")
+    except Exception as e:
+        print(f"Error al enviar el correo: {e}")
 
 
 if __name__ == "__main__":
